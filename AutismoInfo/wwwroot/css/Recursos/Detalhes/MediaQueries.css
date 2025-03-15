@@ -1,0 +1,11 @@
+﻿/* Responsividade */
+@@media (max-width: 768px) {
+    .recurso-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .recurso-data {
+        margin-top: 0.5rem;
+    }
+}

@@ -1,0 +1,58 @@
+﻿/* Recursos */
+.features {
+    padding: 100px 0;
+    background-color: var(--gray-light);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.feature-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    text-align: center;
+}
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+.feature-icon {
+    font-size: 40px;
+    color: var(--purple-primary);
+    margin-bottom: 20px;
+    display: inline-block;
+    background-color: rgba(106, 62, 161, 0.1);
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.feature-card:hover .feature-icon {
+    background-color: var(--purple-primary);
+    color: var(--white);
+    transform: rotateY(360deg);
+}
+
+.feature-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--purple-dark);
+}
+
+.feature-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--gray-dark);
+}

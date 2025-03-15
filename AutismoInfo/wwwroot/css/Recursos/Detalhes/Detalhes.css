@@ -1,0 +1,155 @@
+﻿.detalhe-recurso-container {
+    margin-bottom: 3rem;
+}
+
+/* Botão Voltar */
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    color: var(--gray-dark);
+    background-color: var(--white);
+    border: 1px solid var(--gray-medium);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+    .btn-voltar:hover {
+        background-color: var(--gray-light);
+        color: var(--purple-primary);
+        border-color: var(--purple-light);
+    }
+
+/* Card Principal */
+.recurso-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+}
+
+.recurso-header {
+    background-color: var(--purple-primary);
+    color: var(--white);
+    padding: 1.25rem 1.5rem;
+}
+
+/* Informações do Recurso */
+.recurso-descricao {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--gray-dark);
+    margin-bottom: 1.5rem;
+}
+
+.recurso-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.recurso-data {
+    color: var(--gray-dark);
+    font-size: 0.95rem;
+}
+
+/* Badges e Botões */
+.badge {
+    padding: 0.5rem 0.75rem;
+    font-weight: normal;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+}
+
+.file-type {
+    background-color: var(--purple-light);
+    color: var(--white);
+}
+
+.file-size {
+    background-color: var(--gray-medium);
+    color: var(--gray-dark);
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--purple-primary);
+    color: var(--white);
+    border: none;
+    padding: 0.6rem 1.25rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+    .btn-download:hover {
+        background-color: var(--purple-dark);
+        color: var(--white);
+        text-decoration: none;
+    }
+
+/* Seções */
+.section-title {
+    color: var(--purple-primary);
+    font-weight: 600;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--purple-light);
+    display: inline-block;
+}
+
+.conteudo-completo {
+    line-height: 1.7;
+}
+
+/* Recursos Relacionados */
+.relacionado-card {
+    background-color: var(--gray-light);
+    border-radius: 8px;
+    height: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .relacionado-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+.relacionado-body {
+    padding: 1.5rem;
+}
+
+.relacionado-titulo {
+    color: var(--purple-primary);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.relacionado-descricao {
+    color: var(--gray-dark);
+    margin-bottom: 1rem;
+}
+
+.btn-outline-small {
+    color: var(--purple-primary);
+    border: 1px solid var(--purple-primary);
+    background-color: transparent;
+    transition: all 0.3s;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+    .btn-outline-small:hover {
+        background-color: var(--purple-primary);
+        color: var(--white);
+        text-decoration: none;
+    }

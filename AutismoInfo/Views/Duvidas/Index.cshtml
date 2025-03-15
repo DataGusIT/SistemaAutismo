@@ -1,0 +1,531 @@
+﻿@model List<AutismoInfo.Models.FAQ.CategoriaDuvidaViewModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Perguntas Frequentes (FAQ)";
+}
+
+<<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas Frequentes (FAQ) - Autismo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .header-section {
+            background: linear-gradient(135deg, var(--purple-primary), var(--purple-dark));
+            color: var(--white);
+            padding: 3rem 0;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(106, 62, 161, 0.2);
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza o texto no eixo horizontal */
+            justify-content: center; /* Caso queira centralizar também no eixo vertical */
+            text-align: center; /* Garante que todo o conteúdo de texto fique centralizado */
+        }
+
+        }
+        
+        .header-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .header-section .lead {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        
+        .header-section:before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--purple-light);
+            opacity: 0.2;
+        }
+        
+        .header-section:after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: var(--purple-light);
+            opacity: 0.2;
+        }
+        
+        .search-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .search-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .search-card h5 {
+            color: var(--purple-primary);
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .search-input-group {
+            display: flex;
+            border-radius: 50px;
+            overflow: hidden;
+            border: 2px solid var(--gray-medium);
+            transition: all 0.3s ease;
+        }
+        
+        .search-input-group:focus-within {
+            border-color: var(--purple-primary);
+            box-shadow: 0 0 0 3px rgba(106, 62, 161, 0.2);
+        }
+        
+        .search-input {
+            flex: 1;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            outline: none;
+            color: var(--gray-dark);
+        }
+        
+        .search-button {
+            background: var(--purple-primary);
+            color: var(--white);
+            border: none;
+            padding: 0 1.5rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-button:hover {
+            background: var(--purple-dark);
+        }
+        
+        .search-button i {
+            margin-right: 0.5rem;
+        }
+        
+        .faq-category {
+            background: var(--white);
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .category-header {
+            background: var(--purple-primary);
+            color: var(--white);
+            padding: 1.2rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-header h2 {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .category-header:after {
+            content: "";
+            position: absolute;
+            right: -20px;
+            top: -20px;
+            width: 100px;
+            height: 100px;
+            background: var(--purple-light);
+            opacity: 0.2;
+            border-radius: 50%;
+        }
+        
+        .category-body {
+            padding: 1.5rem;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid var(--gray-light);
+            margin-bottom: 0.8rem;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .faq-question {
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--purple-dark);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            color: var(--purple-primary);
+        }
+        
+        .faq-question i {
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+            color: var(--purple-primary);
+            background: rgba(106, 62, 161, 0.1);
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            opacity: 0;
+        }
+        
+        .faq-answer.active {
+            max-height: 1000px;
+            opacity: 1;
+            padding: 0.5rem 0 1.5rem;
+        }
+        
+        .faq-answer p {
+            margin-top: 0;
+            line-height: 1.6;
+        }
+        
+        .article-recommendation {
+            margin-top: 1.5rem;
+            padding: 1.2rem;
+            background: var(--gray-light);
+            border-radius: 10px;
+            border-left: 4px solid var(--purple-primary);
+        }
+        
+        .article-recommendation h5 {
+            display: flex;
+            align-items: center;
+            color: var(--purple-dark);
+            font-size: 1rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .article-recommendation h5 i {
+            margin-right: 0.5rem;
+        }
+        
+        .article-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1.2rem;
+            background-color: var(--white);
+            color: var(--purple-primary);
+            border: 2px solid var(--purple-primary);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .article-link:hover {
+            background-color: var(--purple-primary);
+            color: var(--white);
+        }
+        
+        .article-link i {
+            margin-left: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .contact-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-header {
+            background: var(--purple-light);
+            margin: -1.5rem -1.5rem 1.5rem;
+            padding: 1.5rem;
+            color: var(--white);
+            position: relative;
+        }
+        
+        .contact-header h3 {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-header:after {
+            content: "";
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .contact-card p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-button {
+            display: inline-flex;
+            align-items: center;
+            background: var(--purple-light);
+            color: var(--white);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(157, 114, 211, 0.3);
+        }
+        
+        .contact-button:hover {
+            background: var(--purple-primary);
+            transform: translateY(-3px);
+        }
+        
+        .contact-button i {
+            margin-right: 0.5rem;
+        }
+        
+        /* Decorative elements */
+        .decorator {
+            position: absolute;
+            background: var(--purple-light);
+            opacity: 0.1;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .decorator-1 {
+            width: 200px;
+            height: 200px;
+            top: -100px;
+            right: -100px;
+        }
+        
+        .decorator-2 {
+            width: 150px;
+            height: 150px;
+            bottom: -75px;
+            left: -75px;
+        }
+        
+        /* Responsive adjustments */
+        @@media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .header-section {
+                padding: 2rem 0;
+            }
+            
+            .header-section h1 {
+                font-size: 2rem;
+            }
+            
+            .header-content {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-section">
+            <div class="header-content">
+                <h1>Perguntas Frequentes sobre Autismo</h1>
+                <p class="lead">
+                    Aqui você encontrará respostas para as dúvidas mais comuns sobre o Transtorno do Espectro Autista (TEA).
+                    Clique nas perguntas para expandir e ver as respostas.
+                </p>
+            </div>
+        </div>
+
+        <div class="search-card">
+            <h5><i class="fas fa-search"></i> Encontre respostas rapidamente</h5>
+            <div class="search-input-group">
+                <input type="text" class="search-input" id="searchFaq" placeholder="Digite sua dúvida...">
+                <button class="search-button">
+                    <i class="fas fa-search"></i> Buscar
+                </button>
+            </div>
+        </div>
+
+        <!-- Foreach para categorias -->
+        <div class="faq-category">
+            <div class="category-header">
+                <h2>Diagnóstico</h2>
+            </div>
+            <div class="category-body">
+                <!-- Foreach para dúvidas -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como é feito o diagnóstico do TEA?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O diagnóstico do Transtorno do Espectro Autista (TEA) é realizado por uma equipe multidisciplinar, geralmente composta por neurologista, psiquiatra, psicólogo e fonoaudiólogo. Não existe um exame específico que detecte o autismo, o diagnóstico é clínico, baseado na observação do comportamento e desenvolvimento da pessoa.</p>
+                        <div class="article-recommendation">
+                            <h5><i class="fas fa-book-open"></i> Recomendação de leitura:</h5>
+                            <a href="#" class="article-link">
+                                Processo de Diagnóstico do TEA <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Qual a idade ideal para diagnóstico?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Os primeiros sinais do autismo podem ser observados por volta dos 18 meses de idade. Recomenda-se que o diagnóstico seja feito o quanto antes, preferivelmente antes dos 3 anos de idade, pois a intervenção precoce tem impacto significativo no desenvolvimento da criança.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <div class="category-header">
+                <h2>Tratamentos</h2>
+            </div>
+            <div class="category-body">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quais são as principais terapias utilizadas no TEA?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>As principais terapias utilizadas no tratamento do TEA incluem: Análise do Comportamento Aplicada (ABA), Terapia Ocupacional, Fonoaudiologia, Psicoterapia, Musicoterapia, entre outras. A escolha das terapias varia de acordo com as necessidades específicas de cada pessoa com autismo.</p>
+                        <div class="article-recommendation">
+                            <h5><i class="fas fa-book-open"></i> Recomendação de leitura:</h5>
+                            <a href="#" class="article-link">
+                                Guia Completo sobre Terapias para TEA <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-header">
+                <h3>Não encontrou sua dúvida?</h3>
+            </div>
+            <p>Se você não encontrou resposta para sua dúvida, entre em contato conosco. Nossa equipe terá prazer em ajudar.</p>
+            <a href="#" class="contact-button">
+                <i class="fas fa-envelope"></i> Enviar Mensagem
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Adicionar comportamento para os botões de perguntas
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    // Toggle active class para o botão
+                    this.classList.toggle('active');
+                    
+                    // Pegar o elemento da resposta (próximo irmão após o botão)
+                    const answer = this.nextElementSibling;
+                    answer.classList.toggle('active');
+                });
+            });
+            
+            // Implementar funcionalidade de busca
+            const searchInput = document.getElementById('searchFaq');
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question span').textContent.toLowerCase();
+                    const answer = item.querySelector('.faq-answer p').textContent.toLowerCase();
+                    
+                    if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        item.style.display = 'block';
+                        // Highlight com background cor de destaque se houver texto
+                        if (searchTerm.length > 2) {
+                            item.style.backgroundColor = 'rgba(106, 62, 161, 0.05)';
+                        } else {
+                            item.style.backgroundColor = 'transparent';
+                        }
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

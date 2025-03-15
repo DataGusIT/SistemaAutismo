@@ -1,0 +1,752 @@
+﻿@model List<AutismoInfo.Models.Contatos.CategoriaContatoViewModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Contatos";
+}
+
+<div class="container">
+    <div class="header-section">
+        <div class="header-content">
+            <h1>Contatos e Centros de Apoio</h1>
+            <p class="lead">
+                Aqui você encontrará informações de contato de clínicas, ONGs e centros de apoio especializados em autismo.
+                Estas instituições oferecem serviços de diagnóstico, terapias, suporte familiar e muito mais.
+            </p>
+        </div>
+    </div>
+
+    <div class="filtro-card">
+        <div class="filtro-header">
+            <h2><i class="fas fa-filter"></i> Filtrar Contatos</h2>
+        </div>
+        <div class="filtro-body">
+            <div class="filtro-row">
+                <div class="filtro-group">
+                    <label for="estadoFiltro">Localização</label>
+                    <div class="select-wrapper">
+                        <select class="form-control" id="estadoFiltro">
+                            <option value="">Todos os estados</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="BA">Bahia</option>
+                            <option value="DF">Distrito Federal</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="filtro-group">
+                    <label for="searchContatos">Buscar por palavras-chave</label>
+                    <div class="search-wrapper">
+                        <input type="text" class="form-control" id="searchContatos" placeholder="Digite palavras-chave...">
+                        <button class="search-btn" type="button"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contatos-grid">
+        @foreach (var categoria in Model)
+        {
+            <div class="categoria-card">
+                <div class="categoria-header">
+                    <div class="categoria-icon">
+                        @if (categoria.Nome.Contains("Clínica"))
+                        {
+                            <i class="fas fa-hospital"></i>
+                        }
+                        else if (categoria.Nome.Contains("ONG"))
+                        {
+                            <i class="fas fa-hands-helping"></i>
+                        }
+                        else if (categoria.Nome.Contains("Centro"))
+                        {
+                            <i class="fas fa-building"></i>
+                        }
+                        else
+                        {
+                            <i class="fas fa-users"></i>
+                        }
+                    </div>
+                    <h2>@categoria.Nome</h2>
+                </div>
+                <div class="categoria-body">
+                    <div class="contatos-list">
+                        @foreach (var contato in categoria.Contatos)
+                        {
+                            <div class="contato-item" data-estado="@contato.Estado">
+                                <div class="contato-card">
+                                    <div class="contato-header">
+                                        <h3>@contato.Nome</h3>
+                                        <span class="contato-estado">@contato.Estado</span>
+                                    </div>
+                                    <div class="contato-body">
+                                        <p class="contato-desc">@contato.Descricao</p>
+                                        <div class="contato-info-grid">
+                                            <div class="contato-info">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                <span>@contato.Endereco, @contato.Cidade - @contato.Estado</span>
+                                            </div>
+                                            <div class="contato-info">
+                                                <i class="fas fa-phone"></i>
+                                                <span>@contato.Telefone</span>
+                                            </div>
+                                            <div class="contato-info">
+                                                <i class="fas fa-envelope"></i>
+                                                <span>@contato.Email</span>
+                                            </div>
+                                            <div class="contato-info">
+                                                <i class="fas fa-clock"></i>
+                                                <span>@contato.HorarioAtendimento</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contato-footer">
+                                        <a asp-action="Detalhes" asp-route-id="@contato.Id" class="btn-detalhes">
+                                            <i class="fas fa-info-circle"></i> Mais informações
+                                        </a>
+
+                                        @if (!string.IsNullOrEmpty(contato.Website))
+                                        {
+                                            <a href="@contato.Website" target="_blank" class="btn-site">
+                                                <i class="fas fa-globe"></i> Website
+                                            </a>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="sugerir-card">
+        <div class="sugerir-content">
+            <div class="sugerir-icon">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="sugerir-text">
+                <h3>Sugerir uma instituição</h3>
+                <p>Conhece alguma instituição de apoio ao autismo que não está em nossa lista? Compartilhe conosco.</p>
+            </div>
+            <a href="#" class="btn-sugerir">
+                <i class="fas fa-plus-circle"></i> Sugerir instituição
+            </a>
+        </div>
+    </div>
+
+    <div class="contatos-empty" style="display: none;">
+        <div class="empty-icon">
+            <i class="fas fa-search"></i>
+        </div>
+        <h3>Nenhum resultado encontrado</h3>
+        <p>Tente ajustar os filtros para encontrar o que procura.</p>
+        <button id="limparFiltros" class="btn-limpar">Limpar filtros</button>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Filtro por estado
+            $("#estadoFiltro").change(function() {
+                filtrarContatos();
+            });
+
+            // Busca por palavras-chave
+            $("#searchContatos").on("keyup", function() {
+                filtrarContatos();
+            });
+
+            // Botão limpar filtros
+            $("#limparFiltros").click(function() {
+                $("#estadoFiltro").val("");
+                $("#searchContatos").val("");
+                filtrarContatos();
+            });
+
+            function filtrarContatos() {
+                var estado = $("#estadoFiltro").val();
+                var busca = $("#searchContatos").val().toLowerCase();
+                var encontrouResultados = false;
+                
+                $(".contato-item").each(function() {
+                    var estadoMatch = estado === "" || $(this).data("estado") === estado;
+                    var text = $(this).text().toLowerCase();
+                    var buscaMatch = busca === "" || text.indexOf(busca) > -1;
+                    
+                    var deveExibir = estadoMatch && buscaMatch;
+                    $(this).toggle(deveExibir);
+                    
+                    if (deveExibir) {
+                        encontrouResultados = true;
+                    }
+                });
+
+                // Verifica se há itens visíveis em cada categoria
+                $(".categoria-card").each(function() {
+                    var visibleItems = $(this).find(".contato-item:visible").length;
+                    $(this).toggle(visibleItems > 0);
+                });
+                
+                // Exibe mensagem de "nenhum resultado" quando necessário
+                $(".contatos-empty").toggle(!encontrouResultados);
+            }
+            
+            // Adiciona classe ativa aos filtros quando preenchidos
+            $("#estadoFiltro, #searchContatos").on("change keyup", function() {
+                if ($(this).val()) {
+                    $(this).addClass("active");
+                } else {
+                    $(this).removeClass("active");
+                }
+            });
+            
+            // Animação de entrada para os cards
+            $(".contato-item").each(function(index) {
+                $(this).css("animation-delay", (index * 0.1) + "s");
+            });
+        });
+    </script>
+}
+
+<style>
+/* Header Section - Igual à da FAQ */
+.header-section {
+    background: linear-gradient(135deg, var(--purple-primary), var(--purple-dark));
+    color: var(--white);
+    padding: 3rem 0;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    margin-top: 30px; /* Adiciona espaço entre o nav e o header */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(106, 62, 161, 0.2);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.header-section .lead {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.header-section:before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--purple-light);
+    opacity: 0.2;
+}
+
+.header-section:after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--purple-light);
+    opacity: 0.2;
+}
+
+/* Filtro Card */
+    /* Filtro Card - Estilo atualizado */
+    .filtro-card {
+        background: var(--white);
+        border-radius: 15px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+    }
+
+        .filtro-card:hover {
+            transform: translateY(-5px);
+        }
+
+    .filtro-header {
+        padding: 0 0 1rem 0;
+        background: transparent;
+    }
+
+        .filtro-header h2 {
+            color: var(--purple-primary);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+            .filtro-header h2 i {
+                margin-right: 10px;
+            }
+
+    .filtro-body {
+        padding: 0;
+    }
+
+    .filtro-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .filtro-group {
+        flex: 1;
+        min-width: 250px;
+    }
+
+        .filtro-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--gray-dark);
+        }
+
+    /* Novos estilos para os campos de input baseados no search-input */
+    .select-wrapper, .search-wrapper {
+        position: relative;
+        display: flex;
+        border-radius: 50px;
+        overflow: hidden;
+        border: 2px solid var(--gray-medium);
+        transition: all 0.3s ease;
+    }
+
+        .select-wrapper:focus-within,
+        .search-wrapper:focus-within {
+            border-color: var(--purple-primary);
+            box-shadow: 0 0 0 3px rgba(106, 62, 161, 0.2);
+        }
+
+    .form-control {
+        flex: 1;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        outline: none;
+        color: var(--gray-dark);
+        width: 100%;
+        background: transparent;
+    }
+
+    /* Estilo do botão de busca */
+    .search-btn {
+        background: var(--purple-primary);
+        color: var(--white);
+        border: none;
+        padding: 0 1.5rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        display: flex;
+        align-items: center;
+    }
+
+        .search-btn:hover {
+            background: var(--purple-dark);
+        }
+
+    /* Ajustes para o ícone do select */
+    .select-wrapper i {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--purple-primary);
+        pointer-events: none;
+    }
+
+.search-wrapper button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--purple-primary);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--gray-medium);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-control:focus, .form-control.active {
+    outline: none;
+    border-color: var(--purple-primary);
+    box-shadow: 0 0 0 3px rgba(106, 62, 161, 0.2);
+}
+
+    .contatos-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+
+/* Categoria Card */
+.categoria-card {
+        ackground: var(--white);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        overflow: hidden;
+        transition: var(--transition);
+}
+
+.categoria-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.categoria-header {
+    padding: 20px 25px;
+    background: var(--gray-light);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid var(--gray-medium);
+}
+
+.categoria-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--purple-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.categoria-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--purple-dark);
+}
+
+.categoria-body {
+    padding: 25px;
+    }
+
+/* Lista de Contatos */
+    .contatos-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Exatamente 2 colunas */
+        gap: 20px;
+    }
+
+/* Contato Item */
+.contato-item {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+@@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contato-card {
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    border: 1px solid var(--gray-medium);
+}
+
+.contato-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+    border-color: var(--purple-light);
+}
+
+.contato-header {
+    padding: 15px 20px;
+    background: var(--gray-light);
+    border-bottom: 1px solid var(--gray-medium);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contato-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--purple-dark);
+}
+
+.contato-estado {
+    background: var(--purple-primary);
+    color: var(--white);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.contato-body {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.contato-desc {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: var(--gray-dark);
+}
+
+.contato-info-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.contato-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contato-info i {
+    color: var(--purple-primary);
+    font-size: 1rem;
+    margin-top: 4px;
+    min-width: 18px;
+}
+
+.contato-info span {
+    line-height: 1.5;
+    color: var(--gray-dark);
+    word-break: break-word;
+}
+
+.contato-footer {
+    padding: 15px 20px;
+    border-top: 1px solid var(--gray-medium);
+    display: flex;
+    gap: 10px;
+    background: var(--gray-light);
+}
+
+.btn-detalhes, .btn-site {
+    padding: 8px 15px;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.btn-detalhes {
+    background: var(--purple-primary);
+    color: var(--white);
+    border: none;
+}
+
+.btn-detalhes:hover {
+    background: var(--purple-dark);
+}
+
+.btn-site {
+    background: var(--white);
+    color: var(--purple-primary);
+    border: 1px solid var(--purple-primary);
+}
+
+.btn-site:hover {
+    background: rgba(106, 62, 161, 0.1);
+}
+
+/* Sugerir Card */
+.sugerir-card {
+    margin-top: 40px;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    padding: 30px;
+    border: 2px dashed var(--purple-light);
+}
+
+.sugerir-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.sugerir-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(106, 62, 161, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--purple-primary);
+    font-size: 1.5rem;
+}
+
+.sugerir-text {
+    flex: 1;
+    min-width: 200px;
+}
+
+.sugerir-text h3 {
+    margin: 0 0 8px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--purple-dark);
+}
+
+.sugerir-text p {
+    margin: 0;
+    color: var(--gray-dark);
+}
+
+.btn-sugerir {
+    background: var(--purple-primary);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-sugerir:hover {
+    background: var(--purple-dark);
+    transform: translateY(-2px);
+}
+
+/* Empty state */
+.contatos-empty {
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--gray-light);
+    border-radius: var(--radius-md);
+    margin-top: 30px;
+}
+
+.empty-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(106, 62, 161, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--purple-primary);
+    font-size: 2rem;
+    margin: 0 auto 20px;
+}
+
+.contatos-empty h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--purple-dark);
+}
+
+.contatos-empty p {
+    margin: 0 0 20px;
+    color: var(--gray-dark);
+}
+
+.btn-limpar {
+    background: var(--purple-primary);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-limpar:hover {
+    background: var(--purple-dark);
+}
+
+/* Responsividade */
+@@media (max-width: 768px) {
+    .header-section {
+        padding: 2.5rem 0;
+        border-radius: 15px;
+    }
+    
+    .header-section h1 {
+        font-size: 2rem;
+    }
+    
+    .filtro-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .contatos-list {
+        grid-template-columns: 1fr;
+    }
+
+    .contatos-grid {
+            grid-template-columns: 1fr; /* Em telas menores, coloca um por linha */
+    }
+    
+    .sugerir-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .sugerir-icon {
+        margin: 0 auto;
+    }
+}
+</style>

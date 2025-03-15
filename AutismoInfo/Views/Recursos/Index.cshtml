@@ -1,0 +1,164 @@
+﻿@model List<AutismoInfo.Models.CategoriaRecursoViewModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Recursos";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos sobre Autismo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/Recursos/Index/Header.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/Recursos/Index/SearchCard.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/Recursos/Index/CategoriasCard.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/Recursos/Index/Recursos.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/Recursos/Index/MediaQueries.css" asp-append-version="true">
+</head>
+<body>
+    <div class="container">
+        <!-- Header redesenhado com o estilo da página FAQ -->
+        <div class="recursos-header">
+            <div class="header-content">
+                <h1>Recursos sobre Autismo</h1>
+                <p class="lead">
+                    Aqui você encontrará diversos materiais informativos e de apoio para compreensão e suporte ao Transtorno do Espectro Autista (TEA).
+                    Nosso objetivo é disponibilizar conteúdo de qualidade para familiares, profissionais e pessoas autistas.
+                </p>
+            </div>
+        </div>
+
+        <!-- Card de busca -->
+        <div class="search-card">
+            <h5><i class="fas fa-search"></i> Buscar recursos</h5>
+            <div class="search-input-group">
+                <input type="text" class="search-input" placeholder="Digite palavras-chave...">
+                <button class="search-button">
+                    <i class="fas fa-search"></i> Buscar
+                </button>
+            </div>
+        </div>
+
+        <!-- Categorias e recursos -->
+        <div class="recursos-categorias">
+            @foreach (var categoria in Model)
+            {
+                <div class="categoria-card">
+                    <div class="categoria-header">
+                        <h2>@categoria.Nome</h2>
+                    </div>
+                    <div class="categoria-body">
+                        <p class="categoria-descricao">
+                            @categoria.Descricao
+                        </p>
+                        
+                        <div class="recursos-list">
+                            @foreach (var recurso in categoria.Recursos)
+                            {
+                                <div class="recurso-item">
+                                    <div class="recurso-header">
+                                                <h5 class="recurso-titulo">@recurso.Titulo</h5>
+                                        <span class="recurso-data">@recurso.DataPublicacao</span>
+                                    </div>
+                                    <p class="recurso-descricao">
+                                        @recurso.Descricao
+                                    </p>
+                                    <div class="recurso-footer">
+                                        <div class="recurso-badges">
+                                            <span class="badge file-type">@recurso.TipoArquivo</span>
+                                            <span class="badge file-size">@recurso.Tamanho</span>
+                                        </div>
+                                        <div class="recurso-actions">
+                                            <a href="@Url.Action("Detalhes", "Recursos", new { id = recurso.Id })" class="btn-outline">Ver detalhes</a>
+                                            <a href="@recurso.Url" class="btn-download">
+                                                <i class="fas fa-download"></i> Download
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                @if (categoria.Recursos.IndexOf(recurso) < categoria.Recursos.Count - 1)
+                                {
+                                    <hr class="recurso-divider">
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Adicionar funcionalidade de busca 
+            const searchInput = document.querySelector('.search-input');
+            const recursoItems = document.querySelectorAll('.recurso-item');
+            const categoriaCards = document.querySelectorAll('.categoria-card');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                if (searchTerm.length < 3) {
+                    // Reexibir todos os itens se a busca for curta
+                    recursoItems.forEach(item => {
+                        item.style.display = 'block';
+                    });
+                    
+                    categoriaCards.forEach(card => {
+                        card.style.display = 'block';
+                    });
+                    
+                    return;
+                }
+                
+                // Busca nos recursos
+                let foundInCategory = new Set();
+                
+                recursoItems.forEach(item => {
+                    const titulo = item.querySelector('.recurso-titulo').textContent.toLowerCase();
+                    const descricao = item.querySelector('.recurso-descricao').textContent.toLowerCase();
+                    const parentCategory = item.closest('.categoria-card');
+                    
+                    if (titulo.includes(searchTerm) || descricao.includes(searchTerm)) {
+                        item.style.display = 'block';
+                        // Destacar com borda
+                        item.style.borderLeftColor = 'var(--purple-primary)';
+                        item.style.borderLeftWidth = '6px';
+                        // Guardar referência da categoria que tem itens correspondentes
+                        if (parentCategory) {
+                            foundInCategory.add(parentCategory);
+                        }
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Exibir apenas categorias com resultados
+                categoriaCards.forEach(card => {
+                    if (foundInCategory.has(card)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Efeito de hover nos botões
+            const allButtons = document.querySelectorAll('.btn-outline, .btn-download');
+            allButtons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+﻿@model AutismoInfo.Models.RecursoViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = Model.Titulo;
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Recursos/Detalhes/Detalhes.css asp-append-version="true">
+    <link rel="stylesheet" href="~/css/Recursos/Detalhes/MediaQueries.css asp-append-version="true">
+
+}
+
+<div class="detalhe-recurso-container">
+    <div class="container py-4">
+        <div class="mb-4">
+            <a asp-action="Index" class="btn-voltar">
+                <i class="fas fa-arrow-left me-2"></i> Voltar para Recursos
+            </a>
+        </div>
+
+        <div class="recurso-card shadow-sm">
+            <div class="recurso-header">
+                <h1 class="h3 mb-0">@Model.Titulo</h1>
+            </div>
+
+            <div class="recurso-body p-4">
+                <div class="recurso-info mb-4">
+                    <p class="recurso-descricao">@Model.Descricao</p>
+
+                    <div class="recurso-meta">
+                        <div class="recurso-badges">
+                            <span class="badge file-type">@Model.TipoArquivo</span>
+                            <span class="badge file-size">@Model.Tamanho</span>
+                        </div>
+                        <div class="recurso-data">Publicado em: @Model.DataPublicacao</div>
+                    </div>
+
+                    <a href="@Model.Url" class="btn-download mt-3" target="_blank">
+                        <i class="fas fa-download me-2"></i> Download do material
+                    </a>
+                </div>
+
+                <div class="recurso-conteudo mt-5">
+                    <h4 class="section-title">Sobre este recurso</h4>
+                    <div class="conteudo-completo mt-3">
+                        @Html.Raw(Model.ConteudoCompleto)
+                    </div>
+                </div>
+
+                <div class="recursos-relacionados mt-5">
+                    <h4 class="section-title">Recursos relacionados</h4>
+                    <div class="row mt-3">
+                        <div class="col-md-6 mb-3">
+                            <div class="relacionado-card">
+                                <div class="relacionado-body">
+                                    <h5 class="relacionado-titulo">Material relacionado 1</h5>
+                                    <p class="relacionado-descricao">Descrição breve do material relacionado.</p>
+                                    <a href="#" class="btn-outline-small">Ver detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="relacionado-card">
+                                <div class="relacionado-body">
+                                    <h5 class="relacionado-titulo">Material relacionado 2</h5>
+                                    <p class="relacionado-descricao">Descrição breve do material relacionado.</p>
+                                    <a href="#" class="btn-outline-small">Ver detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
