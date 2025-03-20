@@ -1,347 +1,355 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AutismoInfo.bundle.scp.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AutismoInfo.bundle.scp.css",
       "PackagePath": "staticwebassets\\AutismoInfo.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\Images\\favicon.png",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\Images\\favicon.png",
       "PackagePath": "staticwebassets\\Images\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\Images\\favicon02.png",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\Images\\favicon02.png",
       "PackagePath": "staticwebassets\\Images\\favicon02.png"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\Images\\img01.jpeg",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\Images\\img01.jpeg",
       "PackagePath": "staticwebassets\\Images\\img01.jpeg"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\Images\\img02.jpeg",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\Images\\img02.jpeg",
       "PackagePath": "staticwebassets\\Images\\img02.jpeg"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\Images\\img03.jpeg",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\Images\\img03.jpeg",
       "PackagePath": "staticwebassets\\Images\\img03.jpeg"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\Images\\img04.png",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\Images\\img04.png",
       "PackagePath": "staticwebassets\\Images\\img04.png"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\Images\\img05.jpeg",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\Images\\img05.jpeg",
       "PackagePath": "staticwebassets\\Images\\img05.jpeg"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\Images\\img06.jpeg",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\Images\\img06.jpeg",
       "PackagePath": "staticwebassets\\Images\\img06.jpeg"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\Images\\logo.png",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\Images\\logo.png",
       "PackagePath": "staticwebassets\\Images\\logo.png"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\css\\Home\\About.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\Home\\About.css",
       "PackagePath": "staticwebassets\\css\\Home\\About.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\css\\Home\\BackToTop.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\Home\\BackToTop.css",
       "PackagePath": "staticwebassets\\css\\Home\\BackToTop.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\css\\Home\\CTA.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\Home\\CTA.css",
       "PackagePath": "staticwebassets\\css\\Home\\CTA.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\css\\Home\\FAQ.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\Home\\FAQ.css",
       "PackagePath": "staticwebassets\\css\\Home\\FAQ.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\css\\Home\\Features.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\Home\\Features.css",
       "PackagePath": "staticwebassets\\css\\Home\\Features.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\css\\Home\\Footer.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\Home\\Footer.css",
       "PackagePath": "staticwebassets\\css\\Home\\Footer.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\css\\Home\\Hero.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\Home\\Hero.css",
       "PackagePath": "staticwebassets\\css\\Home\\Hero.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\css\\Home\\MediaQueries.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\Home\\MediaQueries.css",
       "PackagePath": "staticwebassets\\css\\Home\\MediaQueries.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\css\\Home\\Testimonials.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\Home\\Testimonials.css",
       "PackagePath": "staticwebassets\\css\\Home\\Testimonials.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\css\\Recursos\\Detalhes\\Detalhes.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\Recursos\\Detalhes\\Detalhes.css",
       "PackagePath": "staticwebassets\\css\\Recursos\\Detalhes\\Detalhes.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\css\\Recursos\\Detalhes\\MediaQueries.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\Recursos\\Detalhes\\MediaQueries.css",
       "PackagePath": "staticwebassets\\css\\Recursos\\Detalhes\\MediaQueries.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\css\\Recursos\\Index\\CategoriasCard.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\Recursos\\Index\\CategoriasCard.css",
       "PackagePath": "staticwebassets\\css\\Recursos\\Index\\CategoriasCard.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\css\\Recursos\\Index\\Header.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\Recursos\\Index\\Header.css",
       "PackagePath": "staticwebassets\\css\\Recursos\\Index\\Header.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\css\\Recursos\\Index\\MediaQueries.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\Recursos\\Index\\MediaQueries.css",
       "PackagePath": "staticwebassets\\css\\Recursos\\Index\\MediaQueries.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\css\\Recursos\\Index\\Recursos.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\Recursos\\Index\\Recursos.css",
       "PackagePath": "staticwebassets\\css\\Recursos\\Index\\Recursos.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\css\\Recursos\\Index\\SearchCard.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\Recursos\\Index\\SearchCard.css",
       "PackagePath": "staticwebassets\\css\\Recursos\\Index\\SearchCard.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\Recursos\\chatbot.css",
+      "PackagePath": "staticwebassets\\css\\Recursos\\chatbot.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\js\\chatbot.js",
+      "PackagePath": "staticwebassets\\js\\chatbot.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\gusta\\source\\repos\\AutismoInfo\\AutismoInfo\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\User\\Desktop\\SistemaAutismo\\AutismoInfo\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
