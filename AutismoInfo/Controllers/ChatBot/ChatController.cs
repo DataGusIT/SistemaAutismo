@@ -24,12 +24,10 @@ namespace FocusAcademy.Controllers
             var resposta = await _httpClient.PostAsync("http://127.0.0.1:5000/chat", content);
             var respostaTexto = await resposta.Content.ReadAsStringAsync();
 
-            // Corrigir extração do JSON corretamente
             var respostaJson = JsonSerializer.Deserialize<JsonElement>(respostaTexto);
             var respostaFinal = respostaJson.GetProperty("response").GetString();
 
             return Json(new { resposta = respostaFinal });
-}
-
+        }
     }
 }

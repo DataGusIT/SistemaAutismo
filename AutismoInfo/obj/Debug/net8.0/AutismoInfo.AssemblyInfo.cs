@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutismoInfo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62d5b5f0b5f97deaf77da57dc1e75c20ed9963d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+565ab72b8ae633168dce90756b4ef6f43415cc55")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutismoInfo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutismoInfo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

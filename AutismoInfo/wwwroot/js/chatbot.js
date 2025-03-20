@@ -26,24 +26,23 @@ document.addEventListener("DOMContentLoaded", function () {
     async function sendMessage() {
         let userMessage = chatInput.value.trim();
         if (!userMessage) return;
-    
+
         appendMessage("user", userMessage);
         chatInput.value = "";
-    
+
         try {
             const response = await fetch("/Chat/EnviarMensagem", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ mensagem: userMessage })
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: `mensagem=${encodeURIComponent(userMessage)}`
             });
-    
+
             const data = await response.json();
             appendMessage("bot", data.resposta);
         } catch (error) {
             appendMessage("bot", "Erro ao se comunicar com o servidor.");
         }
     }
-    
 
     function appendMessage(sender, text) {
         let messageDiv = document.createElement("div");
