@@ -10,6 +10,8 @@
     <link rel="icon" type="image/png" href="~/Images/favicon.png" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
     <link rel="stylesheet" href="~/css/Recursos/Detalhes/Detalhes.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/Recursos/chatbot.css" asp-append-version="true">
+    
     @RenderSection("Styles", required: false)
 </head>
 <body>
@@ -38,7 +40,23 @@
         @RenderBody()
     </div>
 
+
+    <button id="chatbot-button">💬</button>
+    <div id="chatbot-box" class="hidden">
+        <div id="chatbot-header">
+            AutismoInfo
+            <button id="chatbot-close">✖</button>
+        </div>
+        <div id="chatbot-messages"></div>
+        <div id="chatbot-input-container">
+            <input type="text" id="chatbot-input" placeholder="Digite uma mensagem..." />
+            <button id="chatbot-send">➤</button>
+        </div>
+    </div>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="~/js/chatbot.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 
